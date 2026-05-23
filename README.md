@@ -36,5 +36,5 @@ The script projects a player's future Performance Index Rating (PIR) using the f
 2. Install the required dependencies using `pip install -r requirements.txt`.
 3. Run the prediction script:
    ```bash
-   python predict.py
+   python src/predict.py --season 2025 --round 37
    ```
