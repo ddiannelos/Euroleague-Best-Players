@@ -1,6 +1,6 @@
-# Euroleague-Best-Players 🏀
+# Euroleague-PIR-Projection 🏀
 
-Python program that extracts the best players per position (Guards, Forwards, Centers) using the `euroleague_api`.
+Python program that extracts the best players per position for each fantasy round (Guards, Forwards, Centers) using the `euroleague_api`.
 
 This tool automatically fetches live data from the Euroleague API, caches it locally for performance, and applies a custom projection algorithm to predict player performance (Projected PIR) for upcoming rounds. It is designed to evaluate players based on their individual statistics, defensive matchups, and team strength.
 
@@ -25,7 +25,7 @@ This tool automatically fetches live data from the Euroleague API, caches it loc
 
 The script projects a player's future Performance Index Rating (PIR) using the following weighted factors:
 
-1.  **Base Value (60/40 Split):** Weighs the player's recent game Valuation (60%) against their season-long Average Valuation (40%).
+1.  **Base Value (60/40 Split):** Weighs the player's recent game Valuation (60%) against their season-long Average Valuation (40%) using PIR.
 2.  **Matchup Coefficient:** Compares the opponent's defense against a specific position to the league average. (e.g., If a team gives up more points to Centers than the league average, opposing Centers get a boost).
 3.  **Home Advantage:** Applies a 5% boost for home games and a 5% penalty for away games.
 4.  **Team Strength:** Adjusts the projection based on the PIR differential between the player's team and the opposing team.
