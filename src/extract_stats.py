@@ -60,6 +60,10 @@ class Stats:
         self.player_stats_api = PlayerStats()
         self.team_stats_api = TeamStats()
 
+        # Crate directories
+        os.makedirs("library", exist_ok=True)
+        os.makedirs("reports", exist_ok=True)
+        
         # File Names
         self.player_cache_file = f"library/player_stats_{self.season}.csv"
         self.defense_cache_file = f"library/defense_stats_{self.season}.csv"
